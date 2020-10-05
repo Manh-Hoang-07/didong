@@ -1,0 +1,32 @@
+{
+  "ecmaVersion": 8,
+  "libs": [
+    "react",
+    "jquery",
+    "browser",
+    "chai",
+    "underscore"
+  ],
+  "loadEagerly": [],
+  "dontLoad": [
+    "node_modules/**"
+  ],
+  "plugins": {
+    "doc_comment": true,
+    "complete_strings": {
+      "maxLength": 15
+    },
+    "modules": {
+      "dontLoad": "",
+      "load": "",
+      "modules": ""
+    },
+    "es_modules": {},
+    "requirejs": {
+      "baseURL": "",
+      "paths": "",
+      "override": ""
+    },
+    "commonjs": {}
+  }
+}
