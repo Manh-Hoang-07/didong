@@ -22,7 +22,7 @@ import HomeScreen from '../components/HomeScreen';
 import MenuImages from '../images/menu.png';
 import MicroImages from '../images/micro.png';
 
-export default class App extends Component{
+export default class Home extends Component{
   constructor(props) {
     super(props);
     this.state = {

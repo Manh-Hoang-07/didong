@@ -12,7 +12,7 @@ import {
   Text,
 } from 'react-native';
 
-export default class Reading extends Component {
+export default class Writing extends Component {
     render() {
       return (
         <View style={{flex:1,backgroundColor:'dodgerBlue',alignItems:'center',justifyContent:'center'}}>  

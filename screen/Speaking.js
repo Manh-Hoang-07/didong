@@ -10,14 +10,23 @@ import React,{Component} from 'react';
 import {
   View,
   Text,
+  Image,
+  StyleSheet
 } from 'react-native';
+import Speak from '../images/speak.png';
 
-export default class Reading extends Component {
+export default class Speaking extends Component {
     render() {
       return (
         <View style={{flex:1,backgroundColor:'dodgerBlue',alignItems:'center',justifyContent:'center'}}>  
-          <Text>Đây là trang nói</Text>
+          <Image source={Speak}/>
+          <Text style={Styles.text1}>Nhấn vào loa để nói</Text>
         </View>
       );
     }
 }
+const Styles = StyleSheet.create({
+  text1: {
+    fontSize:20,
+  }
+});
