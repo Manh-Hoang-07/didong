@@ -1,70 +1,27 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
+import React from 'react';
+import { Button, Text, View } from 'react-native';
+import { createDrawerNavigator } from '@react-navigation/drawer';
+import { NavigationContainer } from '@react-navigation/native';
+import HomeScreen from './screen/Home';
+import Reading from './screen/Reading';
+import Listenning from './screen/Listenning';
+import Speaking from './screen/Speaking';
+import Writing from './screen/Writing';
+import Translate from './screen/Translate';
 
-import React,{Component} from 'react';
-import {
-  StyleSheet,
-  ScrollView,
-  View,
-  Text,
-  Button,
-  FlatList,
-} from 'react-native';
+const Drawer = createDrawerNavigator();
 
-import {
-  LearnMoreLinks,
-  Colors,
-  DebugInstructions,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
-import Home from './components/HomeComponent';
-import HomeScreen from './components/HomeScreen';
-import Homescreen from './components/HomeScreen';
-
-export default class App extends Component{
-  constructor(props) {
-    super(props);
-    this.state = {
-      homes: [
-        {id:1,name:'PART 1'},
-        {id:2,name:'PART 2'},
-        {id:3,name:'PART 3'},
-        {id:4,name:'PART 4'},
-        {id:5,name:'PART 5'},
-        {id:6,name:'PART 6'},
-        {id:7,name:'PART 7'},
-        {id:8,name:'PART 8'},
-        {id:9,name:'PART 9'},
-        {id:10,name:'PART 10'},
-      ]
-    };
-  }
-  render() {
-    const { homes } = this.state;
+export default function App() {
   return (
-    <View>
-        {/* {homes.map(home => <HomeScreen key={home.id} home={home} />)} */}
-        <FlatList data={homes}
-          renderItem={({ item }) => <HomeScreen home={item}/> }
-          keyExtractor={ item => `${item.id}` } 
-            contentContainerStyle={{paddingLeft:10,paddingRight:10}}
-          />
-    </View>
-  )
-  }
+    <NavigationContainer>
+      <Drawer.Navigator initialRouteName="Home">
+        <Drawer.Screen name="Home" component={HomeScreen} />
+        <Drawer.Screen name="Reading" component={Reading} />
+        <Drawer.Screen name="Listenning" component={Listenning} />
+        <Drawer.Screen name="Speaking" component={Speaking} />
+        <Drawer.Screen name="Writing" component={Writing} />
+        <Drawer.Screen name="Translate" component={Translate} />
+      </Drawer.Navigator>
+    </NavigationContainer>
+  );
 }
-const styles=StyleSheet.create({
-  container: {
-    flex:1,
-    alignItems:'stretch',
-    backgroundColor:'#fff',
-    justifyContent:'center',
-    paddingLeft:16,
-    paddingRight:16
-  }
-});

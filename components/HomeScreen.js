@@ -3,16 +3,23 @@ import {
     View,
     Text,
     Image,
-    StyleSheet
+    StyleSheet,
+    TouchableOpacity,
+    Alert
 } from 'react-native';
-import MenuImages from '../images/menu.png'
+import MenuImages from '../images/menu.png';
 
 export default function HomeScreen(props) {
     const {home}=props;
-    return <View style={styles.container}>
+    return (<TouchableOpacity onPress={() => {
+        Alert.alert('Chào')
+      }}>
+    <View style={styles.container}>
         <Text style={styles.title}>{home.name}</Text>
         <Image style={styles.MenuImages} source={MenuImages} />
     </View>
+    </TouchableOpacity>
+    );
 }
 const styles =StyleSheet.create({
     MenuImages: {

@@ -2,10 +2,8 @@ import React, { Component } from 'react';
 import {
   StyleSheet,
   View,
-  ScrollView,
   Text
 } from 'react-native';
-import { color } from 'react-native-reanimated';
  
 export default class Listenning extends Component {
   render() {
