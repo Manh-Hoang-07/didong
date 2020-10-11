@@ -18,7 +18,7 @@ import TestHome from '../components/TestHome';
 import MenuImages from '../images/speak.png';
 import MicroImages from '../images/micro.png';
 import Speaking from './Speaking';
-export default function Reading({navigation}){
+export default function Lecture({navigation}){
   const DATA= [
     {id:1,name:'PART 1',anh:MenuImages,mau:'#2E8B57',navigate:Speaking},
     {id:2,name:'PART 2',anh:MicroImages,mau:'#DC143C',navigate:Speaking},

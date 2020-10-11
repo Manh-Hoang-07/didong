@@ -13,14 +13,15 @@ import {
   Image,
   StyleSheet
 } from 'react-native';
-import Speak from '../images/speak.png';
+import Micro from '../images/micro.png';
 
 export default class Speaking extends Component {
     render() {
       return (
         <View style={{flex:1,backgroundColor:'dodgerBlue',alignItems:'center',justifyContent:'center'}}>  
-          <Image source={Speak}/>
-          <Text style={Styles.text1}>Nhấn vào loa để nói</Text>
+          <Image style={Styles.anh1} source={Micro}/>
+          <Text></Text>
+          <Text style={Styles.text1}>Nhấn vào mic để nói</Text>
         </View>
       );
     }
@@ -28,5 +29,9 @@ export default class Speaking extends Component {
 const Styles = StyleSheet.create({
   text1: {
     fontSize:20,
+  },
+  anh1: {
+    width:'50%',
+    height:'40%'
   }
 });

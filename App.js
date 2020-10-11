@@ -1,27 +1,19 @@
-import React from 'react';
-import { Button, Text, View } from 'react-native';
-import { createDrawerNavigator } from '@react-navigation/drawer';
+import * as React from 'react';
+import { Button, StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
-import HomeScreen from './screen/Home';
-import Reading from './screen/Reading';
-import Listenning from './screen/Listenning';
-import Speaking from './screen/Speaking';
-import Writing from './screen/Writing';
-import Translate from './screen/Translate';
+import { createStackNavigator } from '@react-navigation/stack';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import TestHome from './screen/TestHome';
 
-const Drawer = createDrawerNavigator();
+const Tab = createBottomTabNavigator();
 
 export default function App() {
   return (
     <NavigationContainer>
-      <Drawer.Navigator initialRouteName="Home">
-        <Drawer.Screen name="Home" component={HomeScreen} />
-        <Drawer.Screen name="Reading" component={Reading} />
-        <Drawer.Screen name="Listenning" component={Listenning} />
-        <Drawer.Screen name="Speaking" component={Speaking} />
-        <Drawer.Screen name="Writing" component={Writing} />
-        <Drawer.Screen name="Translate" component={Translate} />
-      </Drawer.Navigator>
+      <Tab.Navigator initialRouteName='Home'>
+        <Tab.Screen name="Home" component={TestHome} />
+        <Tab.Screen name="User" component={View} />
+      </Tab.Navigator>
     </NavigationContainer>
   );
 }

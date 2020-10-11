@@ -16,7 +16,7 @@ export default class Writing extends Component {
     render() {
       return (
         <View style={{flex:1,backgroundColor:'dodgerBlue',alignItems:'center',justifyContent:'center'}}>  
-          <Text>Đây là trang viết</Text>
+          <Text>Đây là trang viết tiếng anh</Text>
         </View>
       );
     }
